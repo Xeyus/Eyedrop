@@ -1,0 +1,14 @@
+----------
+1. WARNING in /workspace/work/eyedrop/tests/ConstraintsTest.java (at line 3)
+	import java.time.*;
+	       ^^^^^^^^^
+The import java.time is never used
+----------
+2. WARNING in /workspace/work/eyedrop/tests/ConstraintsTest.java (at line 4)
+	import java.util.*;
+	       ^^^^^^^^^
+The import java.util is never used
+----------
+2 problems (2 warnings)
+PASS: 1992 assertions (500 generated schedule scenarios, CRUD, duplicate completion, immutable records, persistence).
+PASS: 110 constraint/care/migration assertions.

@@ -1,0 +1,47 @@
+----------
+1. WARNING in /workspace/work/eyedrop/app/src/main/java/com/eyedrop/manager/MainActivity.java (at line 32)
+	void render(){timers.clear();root=col();root.setBackgroundColor(BG);root.setPadding(dp(20),dp(16),dp(20),dp(12));setContentView(root);root.setOnApplyWindowInsetsListener((v,i)->{root.setPadding(dp(20),dp(16)+i.getSystemWindowInsetTop(),dp(20),dp(12)+i.getSystemWindowInsetBottom());return i;});root.requestApplyInsets();LinearLayout brand=row();brand.addView(title("◉  滴答护眼",19),new LinearLayout.LayoutParams(0,-2,1));brand.addView(text("v0.2-A",12,MUTED));root.addView(brand);gap(root,16);ScrollView scroll=new ScrollView(this);body=col();scroll.addView(body);root.addView(scroll,new LinearLayout.LayoutParams(-1,0,1));try{if(tab==0)today();if(tab==1)meds();if(tab==2)history();if(tab==3)settings();}catch(Exception e){fail(e);}LinearLayout nav=row();String[] labels={"时间轴","药物","记录","作息"};for(int i=0;i<4;i++){final int n=i;LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(46),1);lp.setMargins(dp(2),0,dp(2),0);nav.addView(button(labels[i],tab==i,()->{tab=n;render();}),lp);}root.addView(nav);}
+	                                                                                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+The method getSystemWindowInsetTop() from the type WindowInsets is deprecated
+----------
+2. WARNING in /workspace/work/eyedrop/app/src/main/java/com/eyedrop/manager/MainActivity.java (at line 32)
+	void render(){timers.clear();root=col();root.setBackgroundColor(BG);root.setPadding(dp(20),dp(16),dp(20),dp(12));setContentView(root);root.setOnApplyWindowInsetsListener((v,i)->{root.setPadding(dp(20),dp(16)+i.getSystemWindowInsetTop(),dp(20),dp(12)+i.getSystemWindowInsetBottom());return i;});root.requestApplyInsets();LinearLayout brand=row();brand.addView(title("◉  滴答护眼",19),new LinearLayout.LayoutParams(0,-2,1));brand.addView(text("v0.2-A",12,MUTED));root.addView(brand);gap(root,16);ScrollView scroll=new ScrollView(this);body=col();scroll.addView(body);root.addView(scroll,new LinearLayout.LayoutParams(-1,0,1));try{if(tab==0)today();if(tab==1)meds();if(tab==2)history();if(tab==3)settings();}catch(Exception e){fail(e);}LinearLayout nav=row();String[] labels={"时间轴","药物","记录","作息"};for(int i=0;i<4;i++){final int n=i;LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(46),1);lp.setMargins(dp(2),0,dp(2),0);nav.addView(button(labels[i],tab==i,()->{tab=n;render();}),lp);}root.addView(nav);}
+	                                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The method getSystemWindowInsetBottom() from the type WindowInsets is deprecated
+----------
+----------
+3. WARNING in /workspace/work/eyedrop/app/src/main/java/com/eyedrop/manager/CareService.java (at line 18)
+	if(!active){stopForeground(true);stopSelf();return;}getSystemService(NotificationManager.class).notify(1,notification(CHANNEL,ongoing));handler.postDelayed(this,1000);
+	            ^^^^^^^^^^^^^^^^^^^^
+The method stopForeground(boolean) from the type Service is deprecated
+----------
+3 problems (3 warnings)
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+package: name='com.eyedrop.manager' versionCode='2' versionName='0.2.0-A' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+minSdkVersion:'26'
+targetSdkVersion:'35'
+uses-permission: name='android.permission.POST_NOTIFICATIONS'
+uses-permission: name='android.permission.FOREGROUND_SERVICE'
+uses-permission: name='android.permission.FOREGROUND_SERVICE_SPECIAL_USE'
+uses-permission: name='android.permission.WAKE_LOCK'
+application-label:'滴答护眼'
+application-icon-160:'res/drawable/ic_drop.xml'
+application: label='滴答护眼' icon='res/drawable/ic_drop.xml'
+property: name='android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE' value='User-started post-eye-drop care countdown with 3-minute and 10-minute stages' 
+launchable-activity: name='com.eyedrop.manager.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+other-services
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'

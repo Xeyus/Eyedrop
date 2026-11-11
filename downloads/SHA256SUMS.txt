@@ -1,0 +1,2 @@
+a72342ae707f5f9d51663782e30650fb1b5f114c3848940436a97395cc663cb7  dist/EyeDrop-v0.2.0-A.apk
+5791de2382ac0dc8cdaa51e4dd911c078bf40c57afe44af53eb612a124d5a528  downloads/Eyedrop-v0.2A-Windows.zip
